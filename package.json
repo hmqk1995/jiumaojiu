@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hmqk1995/jiumaojiu/issues"
   },
-  "homepage": "https://github.com/hmqk1995/jiumaojiu#readme"
+  "homepage": "https://github.com/hmqk1995/jiumaojiu#readme",
+  "dependencies": {
+    "echarts": "^3.2.2"
+  }
 }
