@@ -1,0 +1,19 @@
+{
+  "name": "jiumaojiu",
+  "version": "1.0.0",
+  "description": "* 九毛九餐厅数据可视化作业",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmqk1995/jiumaojiu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmqk1995/jiumaojiu/issues"
+  },
+  "homepage": "https://github.com/hmqk1995/jiumaojiu#readme"
+}
