@@ -6,10 +6,25 @@
   <link rel="stylesheet" href="css/jquery.fullPage.css" />
 </head>
 <body>
+  <div id="fullpage">
+    <div class="section">Some section</div>
+    <div class="section" id="maps">
+      地图
+      <div id="chart_maps" style="width: 100px;height:100px;"></div>
+    </div>
+    <div class="section">Some section</div>
+    <div class="section">Some section</div>
+  </div>
   <script src="js/jquery.min.js"></script>
   <!-- 引入fullPage插件 -->
   <script src="js/jquery.fullPage.js"></script>
   <!-- 引入echarts图表文件 -->
   <script src="js/echarts.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage();
+    });
+  </script>
+  <script src="js/echarts_default.js"></script>
 </body>
 </html>
