@@ -3,9 +3,24 @@ $(function(){
     init: function(item) {
       var chart = echarts.init(document.getElementById(item.id));
       chart.setOption(item.option);
+    },
+    // 转换数据成打点标准格式
+    convertData: function(data) {
+        var res = [];
+        for (prop in data) {
+          for (item in data[prop]) {
+            res.push({
+              name: item,
+              coord: data[prop][item]
+            });
+          };
+        };
+        console.log(res);
+        return res;
     }
   };
 
+  // 所有餐厅数据（刀小蛮、阿香、和府捞面、九毛九）
   var data = {
     dxm: {
       '刀小蛮云南米线(万达店)':[116.232438,39.911831],
@@ -62,7 +77,7 @@ $(function(){
       '西手工面(金沙洲店)':[113.208554,23.146617],
       '西手工面(南海万科店)':[113.160872,23.043421],
       '西手工面(顺德龙江盈信店)':[113.083281,22.878034],
-      '西手工面(高德置地店)': 113.329208,23.126181],
+      '西手工面(高德置地店)': [113.329208,23.126181],
       '西面馆(来又来店)':[113.238983,23.403239],
       '西面馆(黄沙店)':[113.247191,23.117298],
       '西面馆(恒宝店)':[113.247705,23.122564],
@@ -177,6 +192,7 @@ $(function(){
     }
   };
 
+  var convertData = utils.convertData(data);
   // 地图组件
   var map = {
     id: 'chart_maps',
@@ -194,31 +210,33 @@ $(function(){
         trigger: 'item',
         formatter: '{b}'
       },
+      geo: {
+        map: 'china',
+        label: {
+          normal: {
+            show: false
+          },
+          emphasis: {
+            show: false
+          }
+        },
+        itemStyle: {
+          normal: {
+            areaColor: '#d35b5a',
+            borderColor: '#f78f58'
+          },
+          emphasis: {
+            areaColor: '#ffbb8c'
+          }
+        }
+      },
       series: [
         {
           zoom: 1,
           // center: [117.472644, 31.231706],
           name: '中国',
           type: 'map',
-          mapType: 'china',
           selectedMode : 'multiple',
-          label: {
-            normal: {
-              show: false
-            },
-            emphasis: {
-              show: false
-            }
-          },
-          itemStyle: {
-            normal: {
-              areaColor: '#d35b5a',
-              borderColor: '#f78f58'
-            },
-            emphasis: {
-              areaColor: '#ffbb8c'
-            }
-          },
           markPoint : {
               symbol :'pin',
               symbolSize: 30,
@@ -229,10 +247,7 @@ $(function(){
                 }
               },
               itemStyle : {},
-              data: [{
-                name: '刀小蛮云南米线(万达店)',
-                coord: [116.232438,39.911831]
-              }],
+              data: convertData
           }
         }
       ]
