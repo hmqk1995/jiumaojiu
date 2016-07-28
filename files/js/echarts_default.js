@@ -5,10 +5,6 @@ $(function(){
       chart.setOption(item.option);
     }
   };
-  // 引入中国地图
-  $.get('json/china.json', function (chinaJson) {
-    echarts.registerMap('china', chinaJson);
-  });
 
   // 地图组件
   var map = {
@@ -42,4 +38,5 @@ $(function(){
 
   // 启动地图组件
   utils.init(map);
+
 });
