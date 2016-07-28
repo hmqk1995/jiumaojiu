@@ -193,6 +193,7 @@ $(function(){
   };
 
   var convertData = utils.convertData(data);
+
   // 地图组件
   var map = {
     id: 'chart_maps',
@@ -210,43 +211,47 @@ $(function(){
         trigger: 'item',
         formatter: '{b}'
       },
-      geo: {
-        map: 'china',
-        label: {
-          normal: {
-            show: false
-          },
-          emphasis: {
-            show: false
-          }
-        },
-        itemStyle: {
-          normal: {
-            areaColor: '#d35b5a',
-            borderColor: '#f78f58'
-          },
-          emphasis: {
-            areaColor: '#ffbb8c'
-          }
-        }
-      },
       series: [
         {
-          zoom: 1,
-          // center: [117.472644, 31.231706],
+          zoom: 2,
+          center: [120.472644, 31.231706],
           name: '中国',
           type: 'map',
+          mapType: 'china',
           selectedMode : 'multiple',
+          label: {
+            normal: {
+              show: false
+            },
+            emphasis: {
+              show: false
+            }
+          },
+          itemStyle: {
+            normal: {
+              areaColor: '#d35b5a',
+              borderColor: '#f78f58'
+            },
+            emphasis: {
+              areaColor: '#ffbb8c'
+            }
+          },
           markPoint : {
-              symbol :'pin',
-              symbolSize: 30,
+              symbol :'circle',
+              symbolSize: 12,
               label:{
                 normal : {
-                  show : true,
+                  show : false,
                   formatter: '{b}'
                 }
               },
-              itemStyle : {},
+              itemStyle : {
+                normal: {
+                  color: '#ffd96a',
+                  borderColor: '#f78f58',
+                  borderWidth: 1
+                }
+              },
               data: convertData
           }
         }
