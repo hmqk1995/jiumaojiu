@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hmqk1995/jiumaojiu#readme",
   "dependencies": {
     "echarts": "^3.2.2",
+    "express": "^4.14.0",
     "fullpage.js": "^2.8.2"
   }
 }
