@@ -4,12 +4,28 @@
   <meta charset="UTF-8">
   <title>吃货的美食指南</title>
   <link rel="stylesheet" href="css/jquery.fullPage.css" />
+  <style>
+    #chart_maps {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #maps_tooltip {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30%;
+      height: 30%;
+    }
+  </style>
 </head>
 <body>
   <div id="fullpage">
     <div class="section">Some section</div>
     <div class="section active" id="maps">
       <div id="chart_maps" style="width: 100%;height:100%;"></div>
+      <div id="maps_tooltip">地图地图</div>
     </div>
     <div class="section">Some section</div>
     <div class="section">Some section</div>
@@ -27,5 +43,8 @@
     });
   </script>
   <script src="js/echarts_default.js"></script>
+  <!-- 百度地图 -->
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=krYGrKkSgSbq5AXoZGrtUhzXLvS4HTXP" type="text/javascript"></script>
+  <script src="js/baidu_map.js"></script>
 </body>
 </html>

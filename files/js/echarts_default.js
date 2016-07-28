@@ -3,6 +3,7 @@ $(function(){
     init: function(item) {
       var chart = echarts.init(document.getElementById(item.id));
       chart.setOption(item.option);
+      return chart;
     },
     // 转换数据成打点标准格式
     convertData: function(data) {
@@ -214,11 +215,10 @@ $(function(){
       series: [
         {
           zoom: 2,
-          center: [120.472644, 31.231706],
+          center: [126.472644, 31.231706],
           name: '中国',
           type: 'map',
           mapType: 'china',
-          selectedMode : 'multiple',
           label: {
             normal: {
               show: false
@@ -233,26 +233,28 @@ $(function(){
               borderColor: '#f78f58'
             },
             emphasis: {
-              areaColor: '#ffbb8c'
+              areaColor: '#bd5251'
             }
           },
           markPoint : {
-              symbol :'circle',
-              symbolSize: 12,
-              label:{
-                normal : {
-                  show : false,
-                  formatter: '{b}'
-                }
+            symbol :'circle',
+            symbolSize: 8,
+            label:{
+              normal : {
+                show : false,
+                formatter: '{b}'
               },
-              itemStyle : {
-                normal: {
-                  color: '#ffd96a',
-                  borderColor: '#f78f58',
-                  borderWidth: 1
-                }
-              },
-              data: convertData
+            shadowColor: 'rgba(0, 0, 0, 0.5)',
+            shadowBlur: 10
+            },
+            itemStyle : {
+              normal: {
+                color: '#ffd96a',
+                borderColor: '#f78f58',
+                borderWidth: 1
+              }
+            },
+            data: convertData
           }
         }
       ]
@@ -260,6 +262,40 @@ $(function(){
   };
 
   // 启动地图组件
-  utils.init(map);
+  var mapChart = utils.init(map);
+  mapChart.on('click', function(params){
+    if (params.componentType === "markPoint") {
+      console.log(params);
+      this.setOption({
+        animationDurationUpdate: 1000,
+        animationEasingUpdate: 'cubicInOut',
+        series: [{
+          center: [params.data.coord[0]+0.5, params.data.coord[1]],
+          zoom: 26,
+          markPoint: {
+            symbolSize: 10
+          }
+        }]
+      });
+      // 百度地图API功能
+      var mapPanel = new BMap.Map("maps_tooltip");    // 创建Map实例
+      mapPanel.centerAndZoom(new BMap.Point(params.data.coord[0], params.data.coord[1]), 18);  // 初始化地图,设置中心点坐标和地图级别
+      mapPanel.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+      mapPanel.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+      mapPanel.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
+      var marker = new BMap.Marker(new BMap.Point(params.data.coord[0], params.data.coord[1])); // 创建点
+      mapPanel.addOverlay(marker);   //增加点
+    } else {
+      this.setOption({
+        series: [{
+          zoom: 2,
+          center: [126.472644, 31.231706],
+          markPoint: {
+            symbolSize: 8
+          }
+        }]
+      });
+    }
+  });
 
 });
