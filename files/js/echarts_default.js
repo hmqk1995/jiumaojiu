@@ -1193,4 +1193,118 @@ $(function(){
   // 启动饼图组件5
   var pieChart5 = utils.init(pie5);
 
+  var pie4 = {
+    id: 'chart_pie4',
+    option: {
+        title : {
+          text: '阿香米线',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 3.2,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 11.1,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件4
+  var pieChart4 = utils.init(pie4);
+
+  var contrast = {
+    id: 'chart_contrast',
+    option: {
+        title: {
+            text: "顾客行为对比",
+            subtext: "尝鲜顾客和忠诚顾客"
+        },
+        tooltip: {
+            trigger: "axis"
+        },
+        legend: {
+            data: ["首次来店（尝鲜顾客）", "来店频繁（忠诚度）"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: false,
+                    type: ["line", "bar"]
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: "category",
+                data: ["九毛九西面店", "云海肴", "刀小蛮云南米线", "阿香米线", "和府捞面"]
+            }
+        ],
+        yAxis: [
+            {
+                type: "value"
+            }
+        ],
+        series: [
+            {
+                name: "首次来店（尝鲜顾客）",
+                type: "bar",
+                data: [3.6, 5.9, 6.1, 3.7, 4.6]
+            },
+            {
+                name: "来店频繁（忠诚度）",
+                type: "bar",
+                data: [16.7, 15.1, 12.2, 19.6, 11.3]
+            }
+        ]
+    }
+  };
+  // 启动对比图
+  var contrastChart = utils.init(contrast);
 });
