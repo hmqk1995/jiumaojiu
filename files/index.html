@@ -149,6 +149,13 @@
       color: #ca1c1c;
       margin-bottom: 4px;
     }
+
+    .button {
+      background: #f78f58;
+    }
+    .button:hover {
+      background: #da4931;
+    }
   </style>
 </head>
 <body>
@@ -223,11 +230,20 @@
             <input type="radio" name="region" id="duoyuan" value="duoyuan" />
             多元化
           </label>
-          <label for="multi">
-            <input type="radio" name="region" id="multi" value="multi" />
-            不限
-          </label>
+          <div class='button' id="recommandButton" style="height: 50px;
+                  cursor:pointer;
+                  text-align: center;
+                  line-height: 50px;
+                  border-radius: 20px;
+                  font-weight: bold;
+                  color: #fff2cd;
+                  margin-top: 20px;">我适合哪家？</div>
         </form>
+        <div id="recommand_result" style="
+          font-size: 16px;
+          text-align: center;
+          margin-top: 20px;
+          text-decoration: underline;"></div>
       </div>
     </div>
   </div>
@@ -263,7 +279,49 @@
         };
       var viz = new tableau.Viz(containerDiv, url, options);
       // Create a viz object and embed it in the container div.
-    }())
+    }());
+
+      // 推荐小店
+      var recommandButton = document.getElementById('recommandButton');
+      var recommandList = [];
+      recommandButton.addEventListener('click', function(){
+        recommandList = [];
+
+        if($('#noodles')[0].checked) {
+          recommandList.push('九毛九山西面馆');
+          recommandList.push('和府捞面');
+        } else if ($('#rice')[0].checked) {
+          recommandList.push('云海肴云南菜');
+        } else if ($('#others')[0].checked) {
+          recommandList.push('九毛九山西面馆');
+          recommandList.push('和府捞面');
+          recommandList.push('阿香米线');
+          recommandList.push('云海肴云南菜');
+          recommandList.push('刀小蛮云南米线');
+        }
+
+        if($('#yunnan')[0].checked) {
+          recommandList.push('云海肴云南菜');
+          recommandList.push('刀小蛮云南米线');
+          recommandList.push('阿香米线');
+        } else if ($('#shanxi')[0].checked) {
+          recommandList.push('九毛九山西面馆');
+        } else if ($('#duoyuan')[0].checked) {
+          recommandList.push('九毛九山西面馆');
+          recommandList.push('和府捞面');
+          recommandList.push('阿香米线');
+          recommandList.push('云海肴云南菜');
+          recommandList.push('刀小蛮云南米线');
+        }
+
+        console.log(recommandList);
+        if(recommandList[0] === undefined) {
+          $('#recommand_result').text('您还没有做出选择哦！');
+        } else {
+          $('#recommand_result').text('您可以试试：' + recommandList[Math.round(Math.random(0, recommandList.length))]);
+        }
+      });
+
     });
   </script>
 </body>
