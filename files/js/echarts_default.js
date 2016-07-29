@@ -208,7 +208,7 @@ $(function(){
     option: {
       title : {
         text: '店铺查看 — 美食地图',
-        subtext: '点击具体店铺的圆点查看店铺详细信息',
+        subtext: '点击具体店铺的圆点查看店铺详细信息，店铺评分为多因素综合评分。分值越高餐厅标记越大',
         left: 'center',
         textStyle : {
           color: '#fff',
