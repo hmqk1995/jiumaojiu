@@ -297,6 +297,8 @@ $(function(){
         }
       });
 
+      $('#maps_panel').css({'opacity':'1'});
+
     } else {
       this.setOption({
         series: [{
@@ -307,6 +309,7 @@ $(function(){
           }
         }]
       });
+      $('#maps_panel').css({'opacity':'0'});
     }
   });
 
