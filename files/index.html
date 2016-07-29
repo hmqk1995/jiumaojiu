@@ -99,11 +99,55 @@
     #tableauchart {
       background: #c5aaa3;
     }
+
+    #recommand {
+      background: #ffd96a;
+    }
+
+    #recommand_panel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+
+    #recommand_title {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      background: #faa45d;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 200px;
+      font-size: 35px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .form_head {
+      width: 100%;
+      height: 50px;
+      background: #faa45d;
+      transform: skewX(-20deg);
+      font-size: 20px;
+      line-height: 50px;
+      color: #ca1c1c;
+      margin: 20px 0;
+    }
+
+    label {
+      display: block;
+      color: #ca1c1c;
+      margin-bottom: 4px;
+    }
   </style>
 </head>
 <body>
   <div id="fullpage">
-    <div class="section active" id="preamble">
+    <div class="section" id="preamble">
       <img src='images/circle1.png' id="preamble_c1" />
       <img src='images/circle2.png' id="preamble_c2" />
       <div id="preamble_context">
@@ -134,17 +178,43 @@
     <div class="section" id="tableauchart">
       <div id="vizContainer"></div>
     </div>
-    <div class="section">
-      为您推荐
-      <form>
-        <input type="radio" name="meal" value="noodles" /> 面条
-        <input type="radio" name="meal" value="rice" /> 米饭
-        <input type="radio" name="meal" value="others" /> 不限
-        <input type="radio" name="region" value="yunnan" /> 云南
-        <input type="radio" name="region" value="shanxi" /> 山西
-        <input type="radio" name="region" value="duoyuan" /> 多元
-        <input type="radio" name="region" value="others" /> 不限
-      </form>
+    <div class="section active" id="recommand">
+      <img src='images/circle2.png' />
+      <div id="recommand_panel">
+        <div id="recommand_title">为您推荐</div>
+        <form>
+          <div class="form_head">◥您喜欢的主食口味？</div>
+          <label for="noodles">
+            <input type="radio" name="meal" id="noodles" value="noodles" />
+            面条
+          </label>
+          <label for="rice">
+            <input type="radio" name="meal" id="rice" value="rice" />
+            米饭
+          </label>
+          <label for="others">
+            <input type="radio" name="meal" id="others" value="others" />
+            不限
+          </label>
+          <div class="form_head">◥您偏爱的饮食地域特色？</div>
+          <label for="yunnan">
+            <input type="radio" name="region" id="yunnan" value="yunnan" />
+            云南菜
+          </label>
+          <label for="shanxi">
+            <input type="radio" name="region" id="shanxi" value="shanxi" />
+            山西菜
+          </label>
+          <label for="duoyuan">
+            <input type="radio" name="region" id="duoyuan" value="duoyuan" />
+            多元化
+          </label>
+          <label for="multi">
+            <input type="radio" name="region" id="multi" value="multi" />
+            不限
+          </label>
+        </form>
+      </div>
     </div>
   </div>
   <script src="js/jquery.min.js"></script>
