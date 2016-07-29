@@ -932,4 +932,261 @@ $(function(){
   // 启动条形图组件5
   var barChart5 = utils.init(bar5);
 
+  // 下次再来的意愿的五个饼图
+  //下次再来
+  var pie = {
+    id: 'chart_pie',
+    option: {
+        title : {
+          text: '九毛九西面馆',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 2.7,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 9.3,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件1
+  var pieChart = utils.init(pie);
+
+  var pie2 = {
+    id: 'chart_pie2',
+    option: {
+        title : {
+          text: '云海肴云南菜',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 3.3,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 10.1,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件2
+  var pieChart2 = utils.init(pie2);
+
+  var pie3 = {
+    id: 'chart_pie3',
+    option: {
+        title : {
+          text: '刀小蛮云南米线',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 4.9,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 12.2,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件3
+  var pieChart3 = utils.init(pie3);
+
+  var pie4 = {
+    id: 'chart_pie4',
+    option: {
+        title : {
+          text: '阿香米线',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 3.2,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 11.1,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件4
+  var pieChart4 = utils.init(pie4);
+
+  var pie5 = {
+    id: 'chart_pie5',
+    option: {
+        title : {
+          text: '和府捞面',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
+        tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: "vertical",
+            x: "left",
+            data: ["下次不来", "下次再来"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        series: [
+            {
+                type: "pie",
+                name: "",
+                data: [
+                    {
+                        value: 2.4,
+                        name: "下次不来"
+                    },
+                    {
+                        value: 10.5,
+                        name: "下次再来"
+                    }
+                ]
+            }
+        ]
+    }
+  };
+  // 启动饼图组件5
+  var pieChart5 = utils.init(pie5);
+
 });
