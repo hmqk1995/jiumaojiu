@@ -16,7 +16,7 @@
     #preamble_context {
       position: absolute;
       left: 10%;
-      top:35%;
+      top: 35%;
     }
 
     #preamble_c1 {
@@ -49,18 +49,34 @@
       left: 0;
     }
 
-    #maps_tooltip {
+    #maps_panel {
       position: absolute;
-      right: 20px;
-      top: 20px;
-      width: 30%;
-      height: 30%;
+      right: 30px;
+      top: 120px;
+      width: 35%;
+      height: 65%;
+      background: #ffd96a;
+      border-radius: 20px;
+      border: #f59155 8px solid;
+    }
+
+    #maps_head {
+      border-bottom: 3px solid #f09455;
+      width: 85%;
+      margin: 20px auto 0;
+      padding-bottom: 10px;
+      font-size: 22px;
+      color: #d35b5a;
+    }
+
+    #maps_tooltip {
+      margin: 20px auto 0;
     }
   </style>
 </head>
 <body>
   <div id="fullpage">
-    <div class="section active" id="preamble">
+    <div class="section" id="preamble">
       <img src='images/circle1.png' id="preamble_c1" />
       <img src='images/circle2.png' id="preamble_c2" />
       <div id="preamble_context">
@@ -68,9 +84,17 @@
         <div id="preamble_desc">九毛九手工面、云海肴云南菜、刀小蛮云南米线、阿香米线、和府捞面餐饮数据比较与数据分析</div>
       </div>
     </div>
-    <div class="section" id="maps">
-      <div id="chart_maps" style="width: 100%;height:100%;"></div>
-      <div id="maps_tooltip">地图地图</div>
+    <div class="section active" id="maps">
+      <div id="chart_maps" style="width:100%;height:100%;"></div>
+      <div id="maps_panel">
+        <div id="maps_head">◤ 店铺信息</div>
+        <div id="maps_tooltip" style="width:85%;height:60%;"></div>
+        <div id="maps_info">
+          <div>店铺名称：</div>
+          <div>地址：</div>
+          <div>综合评价：</div>
+        </div>
+      </div>
     </div>
     <div class="section" id="bar">
       <div id="chart_bar" style="width: 50%;height:20%;"></div>

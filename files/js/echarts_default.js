@@ -200,11 +200,12 @@ $(function(){
     id: 'chart_maps',
     option: {
       title : {
-        text: '美食地图',
+        text: '店铺查看 — 美食地图',
         subtext: '店铺分布图',
         left: 'center',
         textStyle : {
-          color: '#fff'
+          color: '#fff',
+          fontSize: '30'
         }
       },
       backgroundColor: '#954040',
