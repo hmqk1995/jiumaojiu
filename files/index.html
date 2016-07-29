@@ -159,6 +159,15 @@
   </style>
 </head>
 <body>
+  <div id="mask" style="width:100%;height:100%;background:#d35b5a;">
+    <div style="position:absolute;left:50%;top:50%;
+          -ms-transform: translate(-50%,-50%);
+          -moz-transform: translate(-50%,-50%);
+          -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+          font-size: 30px;
+          color: white;">Loading...</div>
+  </div>
   <div id="fullpage">
     <div class="section" id="preamble">
       <img src='images/circle1.png' id="preamble_c1" />
@@ -311,6 +320,11 @@
   <script type="text/javascript"
   src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
   <script>
+    // loading...
+    setTimeout(function(){
+      $('#mask').hide();
+    }, 3000);
+
     $(function(){
       (function initViz() {
         var containerDiv = document.getElementById("vizContainer"),
