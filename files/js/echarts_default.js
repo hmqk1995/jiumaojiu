@@ -298,4 +298,628 @@ $(function(){
     }
   });
 
+  // 顾客评价条形图
+  var bar = {
+    id: 'chart_bar',
+    option: {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: "shadow"
+            }
+        },
+        legend: {
+            data: ["非常好", "很好", "好", "一般", "差"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: false,
+                    type: ["line", "bar", "stack", "tiled"]
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: "value"
+            }
+        ],
+        yAxis: [
+            {
+                type: "category",
+                data: ["口味", "环境", "服务"]
+            }
+        ],
+        series: [
+            {
+                name: "非常好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [7599, 7701, 7912]
+            },
+            {
+                name: "很好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [5288, 5274, 4863]
+            },
+            {
+                name: "好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [2156, 2223, 2148]
+            },
+            {
+                name: "一般",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [549, 488, 585]
+            },
+            {
+                name: "差",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideTop"
+                        }
+                    }
+                },
+                data: [267, 173, 340]
+            }
+        ]
+    }
+  };
+  // 启动条形图组件
+  var barChart = utils.init(bar);
+
+  // bar2
+  var bar2 = {
+    id: 'chart_bar2',
+    option: {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: "shadow"
+            }
+        },
+        legend: {
+            data: ["非常好", "很好", "好", "一般", "很差"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: false,
+                    type: ["line", "bar", "stack", "tiled"]
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: "value"
+            }
+        ],
+        yAxis: [
+            {
+                type: "category",
+                data: ["口味", "环境", "服务"]
+            }
+        ],
+        series: [
+            {
+                name: "非常好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [8126, 7599, 7988]
+            },
+            {
+                name: "很好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [4015, 4124, 3797]
+            },
+            {
+                name: "好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [1230, 1431, 1367]
+            },
+            {
+                name: "一般",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [264, 408, 343]
+            },
+            {
+                name: "很差",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideTop"
+                        }
+                    }
+                },
+                data: [123, 196, 263]
+            }
+        ]
+    }
+  };
+
+  // 启动条形图组件2
+  var barChart2 = utils.init(bar2);
+
+  // bar3
+  var bar3 = {
+    id: 'chart_bar3',
+    option: {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: "shadow"
+            }
+        },
+        legend: {
+            data: ["非常好", "很好", "好", "一般", "很差"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: false,
+                    type: ["line", "bar", "stack", "tiled"]
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: "value"
+            }
+        ],
+        yAxis: [
+            {
+                type: "category",
+                data: ["环境", "口味", "服务"]
+            }
+        ],
+        series: [
+            {
+                name: "非常好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [91, 80, 85]
+            },
+            {
+                name: "很好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [54, 47, 53]
+            },
+            {
+                name: "好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [13, 22, 19]
+            },
+            {
+                name: "一般",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [3, 10, 4]
+            },
+            {
+                name: "很差",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideTop"
+                        }
+                    }
+                },
+                data: [3, 5, 3]
+            }
+        ]
+    }
+  };
+
+  // 启动条形图组件3
+  var barChart3 = utils.init(bar3);
+
+  // bar4
+  var bar4 = {
+    id: 'chart_bar4',
+    option: {
+      tooltip: {
+          trigger: "axis",
+          axisPointer: {
+              type: "shadow"
+          }
+      },
+      legend: {
+          data: ["非常好", "很好", "好", "一般", "很差"]
+      },
+      toolbox: {
+          show: true,
+          feature: {
+              mark: {
+                  show: true
+              },
+              dataView: {
+                  show: true,
+                  readOnly: true
+              },
+              magicType: {
+                  show: false,
+                  type: ["line", "bar", "stack", "tiled"]
+              },
+              restore: {
+                  show: true
+              },
+              saveAsImage: {
+                  show: true
+              }
+          }
+      },
+      calculable: true,
+      xAxis: [
+          {
+              type: "value"
+          }
+      ],
+      yAxis: [
+          {
+              type: "category",
+              data: ["服务", "环境", "口味"]
+          }
+      ],
+      series: [
+          {
+              name: "非常好",
+              type: "bar",
+              stack: "总量",
+              itemStyle: {
+                  normal: {
+                      label: {
+                          show: true,
+                          position: "insideRight"
+                      }
+                  }
+              },
+              data: [917, 901, 976]
+          },
+          {
+              name: "很好",
+              type: "bar",
+              stack: "总量",
+              itemStyle: {
+                  normal: {
+                      label: {
+                          show: true,
+                          position: "insideRight"
+                      }
+                  }
+              },
+              data: [532, 569, 562]
+          },
+          {
+              name: "好",
+              type: "bar",
+              stack: "总量",
+              itemStyle: {
+                  normal: {
+                      label: {
+                          show: true,
+                          position: "insideRight"
+                      }
+                  }
+              },
+              data: [223, 243, 192]
+          },
+          {
+              name: "一般",
+              type: "bar",
+              stack: "总量",
+              itemStyle: {
+                  normal: {
+                      label: {
+                          show: true,
+                          position: "insideRight"
+                      }
+                  }
+              },
+              data: [64, 56, 35]
+          },
+          {
+              name: "很差",
+              type: "bar",
+              stack: "总量",
+              itemStyle: {
+                  normal: {
+                      label: {
+                          show: true,
+                          position: "insideTop"
+                      }
+                  }
+              },
+              data: [59, 26, 30]
+          }
+      ]
+  }
+  };
+
+  // 启动条形图组件4
+  var barChart4 = utils.init(bar4);
+
+  // bar5
+  var bar5 = {
+    id: 'chart_bar5',
+    option: {
+        tooltip: {
+            trigger: "axis",
+            axisPointer: {
+                type: "shadow"
+            }
+        },
+        legend: {
+            data: ["非常好", "很好", "好", "一般", "很差"]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                magicType: {
+                    show: false,
+                    type: ["line", "bar", "stack", "tiled"]
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: "value"
+            }
+        ],
+        yAxis: [
+            {
+                type: "category",
+                data: ["环境", "口味", "服务"]
+            }
+        ],
+        series: [
+            {
+                name: "非常好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [6140, 5396, 5677]
+            },
+            {
+                name: "很好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [3658, 3834, 3755]
+            },
+            {
+                name: "好",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [1031, 1393, 1265]
+            },
+            {
+                name: "一般",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideRight"
+                        }
+                    }
+                },
+                data: [147, 302, 238]
+            },
+            {
+                name: "很差",
+                type: "bar",
+                stack: "总量",
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: "insideTop"
+                        }
+                    }
+                },
+                data: [49, 100, 90]
+            }
+        ]
+    }
+  };
+
+  // 启动条形图组件5
+  var barChart5 = utils.init(bar5);
+
 });
