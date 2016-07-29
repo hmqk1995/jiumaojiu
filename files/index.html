@@ -246,6 +246,10 @@
           text-decoration: underline;"></div>
       </div>
     </div>
+    <div class="section" id="tableauchart2">
+      听听大家怎么说
+      <div id="vizContainer2"></div>
+    </div>
   </div>
   <script src="js/jquery.min.js"></script>
   <!-- 引入fullPage插件 -->
@@ -279,6 +283,19 @@
         };
       var viz = new tableau.Viz(containerDiv, url, options);
       // Create a viz object and embed it in the container div.
+    }());
+
+    (function initViz() {
+      var containerDiv = document.getElementById("vizContainer2"),
+      url = "https://public.tableau.com/views/shiyan2223/1_1",
+      options = {
+        hideTabs: true,
+        onFirstInteractive: function () {
+          console.log("Run this code when the viz has finished loading.");
+        }
+      };
+    var viz = new tableau.Viz(containerDiv, url, options);
+    // Create a viz object and embed it in the container div.
     }());
 
       // 推荐小店
