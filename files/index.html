@@ -53,7 +53,7 @@
       position: absolute;
       right: 30px;
       top: 120px;
-      width: 35%;
+      width: 31%;
       height: 65%;
       background: #ffd96a;
       border-radius: 20px;
@@ -71,6 +71,14 @@
 
     #maps_tooltip {
       margin: 20px auto 0;
+    }
+
+    #maps_info {
+      font-size: 16px;
+      color: #766e6b;
+      width: 85%;
+      margin: 15px auto;
+      line-height: 1.6em;
     }
   </style>
 </head>
@@ -90,8 +98,8 @@
         <div id="maps_head">◤ 店铺信息</div>
         <div id="maps_tooltip" style="width:85%;height:60%;"></div>
         <div id="maps_info">
-          <div>店铺名称：</div>
-          <div>地址：</div>
+          <div>店铺名称：<i id="maps_name"></i></div>
+          <div>店铺地址：<i id="maps_address"></i></div>
           <div>综合评价：</div>
         </div>
       </div>

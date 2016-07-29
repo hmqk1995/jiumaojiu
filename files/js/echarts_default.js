@@ -201,11 +201,11 @@ $(function(){
     option: {
       title : {
         text: '店铺查看 — 美食地图',
-        subtext: '店铺分布图',
+        // subtext: '店铺分布图',
         left: 'center',
         textStyle : {
           color: '#fff',
-          fontSize: '30'
+          fontSize: '40'
         }
       },
       backgroundColor: '#954040',
@@ -286,6 +286,17 @@ $(function(){
       mapPanel.enableScrollWheelZoom(false);     //开启鼠标滚轮缩放
       var marker = new BMap.Marker(new BMap.Point(params.data.coord[0], params.data.coord[1])); // 创建点
       mapPanel.addOverlay(marker);   //增加点
+
+      // 百度地图反向地理编码获取经纬度对应的地址
+      var myGeo = new BMap.Geocoder();
+      myGeo.getLocation(new BMap.Point(params.data.coord[0], params.data.coord[1]), function(result){
+        if (result){
+           console.log(result.address);
+           $('#maps_name').text(params.name);
+           $('#maps_address').text(result.address);
+        }
+      });
+
     } else {
       this.setOption({
         series: [{
