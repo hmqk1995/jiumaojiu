@@ -245,8 +245,10 @@ $(function(){
             }
           },
           markPoint : {
-            symbol :'circle',
-            symbolSize: 8,
+            symbol :'pin',
+            symbolSize: function(val,obj){
+              return (obj.data.coord[2] - 40) * 3;
+            },
             label:{
               normal : {
                 show : false,
@@ -279,10 +281,7 @@ $(function(){
         animationEasingUpdate: 'cubicInOut',
         series: [{
           center: [params.data.coord[0]+0.5, params.data.coord[1]],
-          zoom: 26,
-          markPoint: {
-            symbolSize: 10
-          }
+          zoom: 26
         }]
       });
       // 百度地图API功能
@@ -311,10 +310,7 @@ $(function(){
       this.setOption({
         series: [{
           zoom: 2,
-          center: [126.472644, 31.231706],
-          markPoint: {
-            symbolSize: 8
-          }
+          center: [126.472644, 31.231706]
         }]
       });
       $('#maps_panel').css({'opacity':'0'});
