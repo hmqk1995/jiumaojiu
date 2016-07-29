@@ -5,6 +5,44 @@
   <title>吃货的美食指南</title>
   <link rel="stylesheet" href="css/jquery.fullPage.css" />
   <style>
+    body {
+      font-family: san-serif;
+    }
+
+    #preamble {
+      background: #d35b5a;
+    }
+
+    #preamble_context {
+      position: absolute;
+      left: 10%;
+      top:35%;
+    }
+
+    #preamble_c1 {
+      position: absolute;
+      left: -3px;
+      bottom: -3px;
+    }
+
+    #preamble_c2 {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+    }
+
+    #preamble_title {
+      color: #e1e3e2;
+      font-size: 44px;
+    }
+
+    #preamble_desc {
+      color: #e1e3e2;
+      border-top: 5px solid #f09455;
+      padding-top: 10px;
+      font-size: 20px;
+    }
+
     #chart_maps {
       position: absolute;
       top: 0;
@@ -22,7 +60,14 @@
 </head>
 <body>
   <div id="fullpage">
-    <div class="section">Some section</div>
+    <div class="section active" id="preamble">
+      <img src='images/circle1.png' id="preamble_c1" />
+      <img src='images/circle2.png' id="preamble_c2" />
+      <div id="preamble_context">
+        <h2 id="preamble_title">“吃货”的美食指南</h2>
+        <div id="preamble_desc">九毛九手工面、云海肴云南菜、刀小蛮云南米线、阿香米线、和府捞面餐饮数据比较与数据分析</div>
+      </div>
+    </div>
     <div class="section" id="maps">
       <div id="chart_maps" style="width: 100%;height:100%;"></div>
       <div id="maps_tooltip">地图地图</div>
@@ -37,7 +82,7 @@
     <div class="section">
       <div id="vizContainer" style="width: 50%;height:50%;"></div>
     </div>
-    <div class="section active">
+    <div class="section">
       为您推荐
       <form>
         <input type="radio" name="meal" value="noodles" /> 面条
