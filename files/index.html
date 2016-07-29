@@ -86,6 +86,12 @@
     #bar {
       background: #ffd96a;
     }
+
+    .bars {
+      float: left;
+      width: 50%;
+      height: 30%;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +104,7 @@
         <div id="preamble_desc">九毛九手工面、云海肴云南菜、刀小蛮云南米线、阿香米线、和府捞面餐饮数据比较与数据分析</div>
       </div>
     </div>
-    <div class="section active" id="maps">
+    <div class="section" id="maps">
       <div id="chart_maps" style="width:100%;height:100%;"></div>
       <div id="maps_panel" style="opacity:0;">
         <div id="maps_head">◤ 店铺信息</div>
@@ -110,12 +116,12 @@
         </div>
       </div>
     </div>
-    <div class="section" id="bar">
-      <div id="chart_bar" style="width: 50%;height:20%;"></div>
-      <div id="chart_bar2" style="width: 50%;height:20%;"></div>
-      <div id="chart_bar3" style="width: 50%;height:20%;"></div>
-      <div id="chart_bar4" style="width: 50%;height:20%;"></div>
-      <div id="chart_bar5" style="width: 50%;height:20%;"></div>
+    <div class="section active" id="bar">
+      <div class="bars" id="chart_bar"></div>
+      <div class="bars" id="chart_bar2"></div>
+      <div class="bars" id="chart_bar3"></div>
+      <div class="bars" id="chart_bar4"></div>
+      <div class="bars" id="chart_bar5"></div>
     </div>
     <div class="section">
       <div id="vizContainer" style="width: 50%;height:50%;"></div>

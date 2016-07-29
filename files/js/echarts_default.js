@@ -201,7 +201,7 @@ $(function(){
     option: {
       title : {
         text: '店铺查看 — 美食地图',
-        // subtext: '店铺分布图',
+        subtext: '点击具体店铺的圆点查看店铺详细信息',
         left: 'center',
         textStyle : {
           color: '#fff',
@@ -317,6 +317,15 @@ $(function(){
   var bar = {
     id: 'chart_bar',
     option: {
+        title : {
+          text: '九毛九西面馆',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
         tooltip: {
             trigger: "axis",
             axisPointer: {
@@ -324,7 +333,7 @@ $(function(){
             }
         },
         legend: {
-            data: ["非常好", "很好", "好", "一般", "差"]
+            data: ["非常好", "很好", "好", "一般", "很差"]
         },
         toolbox: {
             show: true,
@@ -332,19 +341,9 @@ $(function(){
                 mark: {
                     show: true
                 },
-                dataView: {
-                    show: true,
-                    readOnly: true
-                },
                 magicType: {
                     show: false,
                     type: ["line", "bar", "stack", "tiled"]
-                },
-                restore: {
-                    show: true
-                },
-                saveAsImage: {
-                    show: true
                 }
             }
         },
@@ -396,7 +395,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -410,7 +409,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -418,13 +417,13 @@ $(function(){
                 data: [549, 488, 585]
             },
             {
-                name: "差",
+                name: "很差",
                 type: "bar",
                 stack: "总量",
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideTop"
                         }
                     }
@@ -441,6 +440,15 @@ $(function(){
   var bar2 = {
     id: 'chart_bar2',
     option: {
+        title : {
+          text: '云海肴云南菜',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
         tooltip: {
             trigger: "axis",
             axisPointer: {
@@ -456,19 +464,9 @@ $(function(){
                 mark: {
                     show: true
                 },
-                dataView: {
-                    show: true,
-                    readOnly: true
-                },
                 magicType: {
                     show: false,
                     type: ["line", "bar", "stack", "tiled"]
-                },
-                restore: {
-                    show: true
-                },
-                saveAsImage: {
-                    show: true
                 }
             }
         },
@@ -520,7 +518,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -534,7 +532,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -548,7 +546,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideTop"
                         }
                     }
@@ -566,6 +564,15 @@ $(function(){
   var bar3 = {
     id: 'chart_bar3',
     option: {
+        title : {
+          text: '刀小蛮云南米线',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
         tooltip: {
             trigger: "axis",
             axisPointer: {
@@ -581,19 +588,9 @@ $(function(){
                 mark: {
                     show: true
                 },
-                dataView: {
-                    show: true,
-                    readOnly: true
-                },
                 magicType: {
                     show: false,
                     type: ["line", "bar", "stack", "tiled"]
-                },
-                restore: {
-                    show: true
-                },
-                saveAsImage: {
-                    show: true
                 }
             }
         },
@@ -645,7 +642,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -659,7 +656,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -673,7 +670,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideTop"
                         }
                     }
@@ -691,6 +688,15 @@ $(function(){
   var bar4 = {
     id: 'chart_bar4',
     option: {
+      title : {
+        text: '阿香米线',
+        bottom: '0',
+        left: 'center',
+        textStyle : {
+          // color: '#fff',
+          // fontSize: '40'
+        }
+      },
       tooltip: {
           trigger: "axis",
           axisPointer: {
@@ -706,19 +712,9 @@ $(function(){
               mark: {
                   show: true
               },
-              dataView: {
-                  show: true,
-                  readOnly: true
-              },
               magicType: {
                   show: false,
                   type: ["line", "bar", "stack", "tiled"]
-              },
-              restore: {
-                  show: true
-              },
-              saveAsImage: {
-                  show: true
               }
           }
       },
@@ -770,7 +766,7 @@ $(function(){
               itemStyle: {
                   normal: {
                       label: {
-                          show: true,
+                          show: false,
                           position: "insideRight"
                       }
                   }
@@ -784,7 +780,7 @@ $(function(){
               itemStyle: {
                   normal: {
                       label: {
-                          show: true,
+                          show: false,
                           position: "insideRight"
                       }
                   }
@@ -798,7 +794,7 @@ $(function(){
               itemStyle: {
                   normal: {
                       label: {
-                          show: true,
+                          show: false,
                           position: "insideTop"
                       }
                   }
@@ -816,6 +812,15 @@ $(function(){
   var bar5 = {
     id: 'chart_bar5',
     option: {
+        title : {
+          text: '和府捞面',
+          bottom: '0',
+          left: 'center',
+          textStyle : {
+            // color: '#fff',
+            // fontSize: '40'
+          }
+        },
         tooltip: {
             trigger: "axis",
             axisPointer: {
@@ -831,19 +836,9 @@ $(function(){
                 mark: {
                     show: true
                 },
-                dataView: {
-                    show: true,
-                    readOnly: true
-                },
                 magicType: {
                     show: false,
                     type: ["line", "bar", "stack", "tiled"]
-                },
-                restore: {
-                    show: true
-                },
-                saveAsImage: {
-                    show: true
                 }
             }
         },
@@ -895,7 +890,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -909,7 +904,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideRight"
                         }
                     }
@@ -923,7 +918,7 @@ $(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true,
+                            show: false,
                             position: "insideTop"
                         }
                     }
