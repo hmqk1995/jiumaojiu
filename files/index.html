@@ -28,7 +28,9 @@
       <div id="maps_tooltip">地图地图</div>
     </div>
     <div class="section">Some section</div>
-    <div class="section">Some section</div>
+    <div class="section">
+      <div id="vizContainer" style="width: 50%;height:50%;"></div>
+    </div>
   </div>
   <script src="js/jquery.min.js"></script>
   <!-- 引入fullPage插件 -->
@@ -46,5 +48,24 @@
   <!-- 百度地图 -->
   <script src="http://api.map.baidu.com/api?v=2.0&ak=krYGrKkSgSbq5AXoZGrtUhzXLvS4HTXP" type="text/javascript"></script>
   <script src="js/baidu_map.js"></script>
+  <!-- tableau -->
+  <script type="text/javascript"
+  src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
+  <script>
+    $(function(){
+      (function initViz() {
+        var containerDiv = document.getElementById("vizContainer"),
+        url = "http://public.tableau.com/views/1_883/sheet0",
+        options = {
+          hideTabs: true,
+          onFirstInteractive: function () {
+            console.log("Run this code when the viz has finished loading.");
+          }
+        };
+      var viz = new tableau.Viz(containerDiv, url, options);
+      // Create a viz object and embed it in the container div.
+    }())
+    });
+  </script>
 </body>
 </html>
